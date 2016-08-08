@@ -53,8 +53,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	//---
 	const char * vertexShaderSource = "\nattribute vec2 position;\n\nvoid main(){\ngl_Position = vec4(position, 0.0, 1.0);\n}\n\0";
-	//const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(100/gl_FragCoord.x, 100/gl_FragCoord.y, 0.0, 1.0);\n}\n\0";
-	const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(gl_FragCoord.x*0.001, gl_FragCoord.y*0.001, 0.0, 1.0);\n}\n\0";
+	//const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(100/gl_FragCoord.x, 100/gl_FragCoord.y, 0.0, 1.0);\n}\n\0"; old shader
+	const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(gl_FragCoord.x*0.001, gl_FragCoord.y*0.001, 0.0, 1.0);\n}\n\0"; // changed 100/gl_FragCoord.x to gl_FragCoord.x*0.001 and it compiled! 
 	//---
 	glShaderSource(vertexShader, 1, &vertexShaderSource , NULL);
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
