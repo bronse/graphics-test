@@ -33,7 +33,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 	// gl stuff
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 	SDL_GL_CreateContext(window); // changed this from the original
@@ -53,7 +53,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	//---
 	const char * vertexShaderSource = "\nattribute vec2 position;\n\nvoid main(){\ngl_Position = vec4(position, 0.0, 1.0);\n}\n\0";
-	const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(100/gl_FragCoord.x, 100/gl_FragCoord.y, 0.0, 1.0);\n}\n\0";
+	//const char * fragmentShaderSource = "\nprecision highp float;\n\nvoid main(){\ngl_FragColor = vec4(100/gl_FragCoord.x, 100/gl_FragCoord.y, 0.0, 1.0);\n}\n\0";
+	const char * fragmentShaderSource = "void main(){\ngl_FragColor = vec4(100/gl_FragCoord.x, 100/gl_FragCoord.y, 0.0, 1.0);\n}\n\0";
 	//---
 	glShaderSource(vertexShader, 1, &vertexShaderSource , NULL);
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
@@ -67,7 +68,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	glCompileShader(fragmentShader);                           /// compile the fragment shader
 	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &status); /// check to see if the fragment shader compiled correctly
 	if (!status) {
-		return -2;
+		//return -2;
 	}
 	//---
 	GLuint program = glCreateProgram();
@@ -77,7 +78,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	int linked;
 	glGetProgramiv(program, GL_LINK_STATUS, &linked);
 	if (!linked)
-		return -3;
+		//return -3;
 	glUseProgram(program);
 
 	//--- set up vertex data
@@ -96,7 +97,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	//--- set up vertex attributes
 	GLuint vertexHandle = glGetAttribLocation(program, "position");
 	if (vertexHandle == -1)
-		return -4;
+		//return -4;
 	glEnableVertexAttribArray(vertexHandle);
 	glVertexAttribPointer(vertexHandle, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), 0);
 

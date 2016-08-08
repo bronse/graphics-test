@@ -1,2 +1,7 @@
-﻿  graphics_test.vcxproj -> C:\Users\brian\Documents\Visual Studio 2015\Projects\graphics_test\Debug\graphics_test.exe
-  graphics_test.vcxproj -> C:\Users\brian\Documents\Visual Studio 2015\Projects\graphics_test\Debug\graphics_test.pdb (Full PDB)
+﻿  graphics_test.cpp
+c:\users\brian\documents\github\graphics-test\graphics_test\graphics_test\graphics_test.cpp(112): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+c:\users\brian\documents\github\graphics-test\graphics_test\graphics_test\graphics_test.cpp(112): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\brian\documents\github\graphics-test\graphics_test\graphics_test\graphics_test.cpp(113): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+c:\users\brian\documents\github\graphics-test\graphics_test\graphics_test\graphics_test.cpp(113): warning C4305: 'initializing': truncation from 'double' to 'float'
+  graphics_test.vcxproj -> C:\Users\Brian\Documents\GitHub\graphics-test\graphics_test\Debug\graphics_test.exe
+  graphics_test.vcxproj -> C:\Users\Brian\Documents\GitHub\graphics-test\graphics_test\Debug\graphics_test.pdb (Full PDB)

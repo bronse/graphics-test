@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\brian\Desktop\glew-1.13.0\include\GL;C:\Users\brian\Desktop\SDL2-2.0.4\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\brian\Desktop\glew-1.13.0\lib\Release\Win32;C:\Users\brian\Desktop\SDL2-2.0.4\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Brian\Documents\GitHub\graphics-test\glew-1.13.0\include\GL;C:\Users\Brian\Documents\GitHub\graphics-test\SDL2-2.0.4\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Brian\Documents\GitHub\graphics-test\glew-1.13.0\lib\Release\Win32;C:\Users\Brian\Documents\GitHub\graphics-test\SDL2-2.0.4\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>

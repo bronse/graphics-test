@@ -2,7 +2,7 @@
 #define CRT_WINDOW_H
 
 /// include the sdl graphics library. statically link for realease version.
-#include "C:\Users\Brian\Downloads\SDL2-devel-2.0.4-VC\SDL2-2.0.4\include\SDL.h"
+#include "SDL.h"
 
 // window dimension constants
 const int WINDOW_WIDTH = 500;  
