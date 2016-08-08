@@ -1,0 +1,4 @@
+this is a list of things to do when i am getting ready to release this project. 
+
+- set visual studio to copy the dll after compiling instead of sticking the dll in the same directory. its supposed to be better. look at the url
+  that i used to set up sdl again to see how to do it.
